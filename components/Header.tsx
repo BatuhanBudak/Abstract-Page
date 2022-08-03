@@ -44,7 +44,7 @@ export default function Header() {
                     aria-expanded={searchToggled}
                     onClick={toggleSearch}
                     aria-controls="nav-search">
-                    <Image src={search} alt="Abstract Logo" />
+                    {/* <Image className="search-svg" src={search} alt="search icon" /> */}
                 </button>
                 <button
                     className="nav-toggle"

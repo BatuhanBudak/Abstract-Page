@@ -3,7 +3,7 @@ import React from "react";
 export default function Nav({ closeNav }) {
     return (
         <nav className="nav" >
-            <a href="/#services" className="nav__link" onClick={() => closeNav()}>
+            <a href="/#services" className="nav__link nav__link-first" onClick={() => closeNav()}>
                 Submit a request
             </a>
             <a href="/#services" className="nav__link" onClick={() => closeNav()}>

@@ -3,9 +3,8 @@
 header {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
-    padding: 2em 3em;
+    padding: 2em 1em;
     background-color: black;
     position: relative;
     height: 5rem;
@@ -43,15 +42,25 @@ header {
     justify-content: space-around;
     z-index: 100;
     visibility: hidden;
-
+    padding: 2rem 1rem;
 }
+
 
 .nav__link {
     color: white;
     /* font-weight: var(--fw-bold);
     font-size: var(--fs-h2); */
     text-decoration: none;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    border-radius: 0;
+    width: 50%;
+    transition: all .3s;
+    text-align: center;
+}
 
+.nav__link-first {
+    border-bottom: 1px solid white;
 }
 
 /* .nav__list {
@@ -65,9 +74,6 @@ header {
     padding: 0;
 } */
 
-.nav__link {
-    border-bottom: .2rem solid rgba(22, 224, 189, 0);
-}
 
 .nav__link:hover,
 .nav__link:focus {
@@ -87,10 +93,30 @@ header {
     color: white;
 }
 
+.search-toggle {
+    background-image: url(/search.svg);
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: none;
+}
+
+.header-button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.nav-open {
+    background: #191a1b;
+
+}
+
 .nav-open .nav {
     visibility: visible;
     display: flex;
-    /* transform: translateY(0); */
+    background: #191a1b;
 }
 
 /* .nav-open .nav-toggle {
@@ -108,7 +134,7 @@ header {
 }
 
 .nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
+    transform: rotate(90deg) translateX(-8px);
 }
 
 .nav-open .hamburger::after {
@@ -120,8 +146,8 @@ header {
 .hamburger::after {
     background: white;
     width: 2em;
-    height: 3px;
-    border-radius: 1em;
+    height: 2px;
+    border-radius: 4px;
     transition: transform 250ms ease-in-out;
 }
 
@@ -134,11 +160,11 @@ header {
 }
 
 .hamburger::before {
-    top: 6px;
+    top: 8px;
 }
 
 .hamburger::after {
-    bottom: 6px;
+    bottom: 8px;
 }
 
 .logo-svg {
@@ -147,9 +173,11 @@ header {
     color: black;
 }
 
+
 .border-left {
     border-left: 2px solid white;
 }
+
 
 /* @media (min-width: 1000px) {
 
