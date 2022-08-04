@@ -1,5 +1,3 @@
-/* Header */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -14,12 +12,20 @@ header {
     display: flex;
     gap: 1em;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    font-family: var(--ff-secondary);
 }
 
 .header-left-link {
     color: white;
-    font-size: 24px;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+
+    .header-left-link {
+        font-size: 1.25rem;
+    }
 }
 
 .header-left-link--second {
@@ -169,15 +175,16 @@ header {
     visibility: visible;
 }
 
+.search-open .header-button-group {
+    display: none;
+    visibility: hidden;
+}
+
 .nav-open .nav {
     visibility: visible;
     display: flex;
     background: #191a1b;
 }
-
-/* .nav-open .nav-toggle {
-    position: fixed;
-} */
 
 .hamburger {
     display: block;
@@ -238,6 +245,7 @@ header {
 
     .header-left-links {
         width: 30%;
+        font-size: 1.5rem;
     }
 
     .nav {
