@@ -100,8 +100,6 @@ header {
     background-color: #fff;
     border: 1px solid black;
     border-radius: 4px;
-
-    /* transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; */
 }
 
 .mobile-search-input::placeholder {
