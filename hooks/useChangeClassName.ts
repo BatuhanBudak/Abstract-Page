@@ -1,25 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SyntheticEvent } from "react";
 import useResize from "./useResize";
 
 export default function useChangeClassName() {
-  const [navToggled, setNavToggled] = useState(false);
-  const [searchToggled, setSearchToggled] = useState(false);
-  const [headerClassName, setHeaderClassName] = useState("");
+  const [navToggled, setNavToggled] = useState<boolean>(false);
+  const [searchToggled, setSearchToggled] = useState<boolean>(false);
+  const [headerClassName, setHeaderClassName] = useState<string>("");
 
   const windowWidth = useResize();
   const desktopScreen = 1200;
 
-  function closeNav(e) {
+  function closeNav(e: SyntheticEvent):void {
     e.stopPropagation();
     if (windowWidth > desktopScreen) return;
     setNavToggled(false);
   }
-  function toggleNav(e) {
+  function toggleNav(e: SyntheticEvent):void {
     e.stopPropagation();
     setNavToggled((prev) => !prev);
   }
 
-  function toggleSearch(e) {
+  function toggleSearch(e: SyntheticEvent ):void {
     e.preventDefault();
     e.stopPropagation();
     setSearchToggled((prev) => !prev);
